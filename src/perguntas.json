@@ -1,0 +1,26 @@
+[
+    {
+        "pergunta": "Que animal é esse??",
+        "opcoes": ["Cachorro", "Morra", "Sharknado", "Tubachorro"],
+        "correta": "Tubachorro",
+        "imagem": "https://socientifica.com.br/wp-content/uploads/2020/04/Entender-este-cachorro-2-640x858.jpg"
+    },
+    {
+        "pergunta": "O gato ta feliz?",
+        "opcoes": ["O que é felicidade?", "Obvio", "Gato?", "Nem"],
+        "correta": "Obvio",
+        "imagem": "https://i.pinimg.com/280x280_RS/1d/e6/65/1de6654381dc4c53a5998350795d3247.jpg"
+    },
+    {
+        "pergunta": "Valendo 6 reais, segundo o cantor Crazy Frog em sua canção, o que ele quer?",
+        "opcoes": ["ABLINGLINBLINBLONBLONBLINBLINBINBLONBLAI", "BRINGLINGLINGLONGLONGLENGANGLENGLEN", "BRANGANGANGENGANGENGANGINGIN", "BINBIN"],
+        "correta": "BINBIN",
+        "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX9eb2JJzJ5yfCjsf5Gi7h7sWWv0FstSE4YmHCJbLDvw&s"
+    },
+    {
+        "pergunta": "Girafas existem?",
+        "opcoes": ["Não, são hologramas", "Sim ao contrario", "Chevette 1.6 DL 1992 Gasolina", "сфсуефвф"],
+        "correta": "Não, são hologramas",
+        "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKFF1xVlGMrJqkLw6XK6-YhcefzclIm7P5kWCovL5y5w&s"
+    }
+]

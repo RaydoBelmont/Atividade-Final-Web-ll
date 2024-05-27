@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#app {
+  margin: 5px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#question-container {
+  margin-top: 20px;
+}
+
+#imagem-pergunta img {
+  width: 300px;  /* Largura desejada */
+  height: 200px; /* Altura desejada */
+  object-fit: cover; /* Mantém a proporção da imagem, cortando se necessário */
+  border-radius: 8px; /* Adiciona cantos arredondados, opcional */
+  display: block; /* Certifica-se de que a imagem é exibida como um bloco */
+  margin: 10px auto; /* Centraliza a imagem com margem */
+}
+
+#options button {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  width: 100%;
+}
+
