@@ -25,7 +25,6 @@ socket.on('pergunta', (pergunta) => {
         button.innerText = opcao;
         button.addEventListener('click', () => {
             socket.emit('resposta', { resposta: opcao, playerId: socket.id });
-            // Disable buttons after one click
             Array.from(containerDasOpcoes.children).forEach(btn => btn.disabled = true);
         });
         containerDasOpcoes.appendChild(button);
