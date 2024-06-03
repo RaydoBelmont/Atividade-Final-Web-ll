@@ -37,3 +37,16 @@ body {
   width: 100%;
 }
 
+#botoes {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#botao-iniciar {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+

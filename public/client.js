@@ -1,5 +1,23 @@
 const socket = io();
 
+document.getElementById('botao-iniciar').addEventListener('click', () => {
+    document.getElementById('botao-iniciar').style.display = 'none';
+    document.getElementById('question-container').style.display = 'block';
+    iniciarQuiz();
+});
+
+document.getElementById('botao-resetar').addEventListener('click', () => {
+    resetarQuiz();
+});
+
+function iniciarQuiz() {
+    socket.emit('iniciarQuiz');
+}
+
+function resetarQuiz() {
+    socket.emit('resetarQuiz');
+}
+
 socket.on('welcomido', (message) => {
     const { boasVindas, playerId } = message;
     document.getElementById('mensagem-boasvindas').innerText = boasVindas;
@@ -31,7 +49,6 @@ socket.on('pergunta', (pergunta) => {
     });
 });
 
-
 socket.on('repostaDaResposta', (data) => {
     const containerDaRespostaDaResposta = document.getElementById('repostaDaResposta');
     if (data.correto) {
@@ -49,4 +66,20 @@ socket.on('atualizarPontuacao', (pontos) => {
         p.innerText = `Jogador ${jogador}: ${pontos[jogador]}`;
         containerDoPlayer.appendChild(p);
     }
+});
+
+socket.on('quizTerminado', () => {
+    const containerDaRespostaDaResposta = document.getElementById('repostaDaResposta');
+    containerDaRespostaDaResposta.innerText = 'Quiz terminado! Obrigado por jogar.';
+    const containerDasOpcoes = document.getElementById('options');
+    containerDasOpcoes.innerHTML = '';
+    document.getElementById('botao-resetar').style.display = 'inline-block';
+});
+
+socket.on('resetado', () => {
+    document.getElementById('botao-iniciar').style.display = 'inline-block';
+    document.getElementById('botao-resetar').style.display = 'none';
+    document.getElementById('question-container').style.display = 'none';
+    document.getElementById('repostaDaResposta').innerText = '';
+    document.getElementById('pontuacao').innerHTML = '';
 });
