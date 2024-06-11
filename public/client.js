@@ -70,7 +70,9 @@ socket.on('atualizarPontuacao', (pontos) => {
 
 socket.on('quizTerminado', () => {
     const containerDaRespostaDaResposta = document.getElementById('repostaDaResposta');
-    containerDaRespostaDaResposta.innerText = 'Quiz terminado! Obrigado por jogar.';
+    const p = document.createElement('p');
+    p.innerText = 'Quiz terminado! Obrigado por jogar.';
+    containerDaRespostaDaResposta.appendChild(p);
     const containerDasOpcoes = document.getElementById('options');
     containerDasOpcoes.innerHTML = '';
     document.getElementById('botao-resetar').style.display = 'inline-block';
